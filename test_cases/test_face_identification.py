@@ -101,7 +101,7 @@ class TestHealth():
                 break
             print("老用户正常登录")
 
-
+#这是全局的停止代码
     def teardown_method(self):
         stop_app('com.senseauto.healthdetect')
         

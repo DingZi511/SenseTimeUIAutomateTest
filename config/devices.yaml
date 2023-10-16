@@ -1,0 +1,6 @@
+Android:
+        platformName: Android
+        deviceName: "QWXNU19404103790"
+        appActivity: ".ui.FirstActivity"
+        appPackage: "com.senseauto.healthdetect"
+        noReset: false

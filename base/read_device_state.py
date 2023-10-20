@@ -68,6 +68,7 @@ class MobileQQTest(object):
                 # print("TotalTime:%s,WaitTime:%s" % (test[0][1], test[0][2]))
                 time.sleep(3)
             self.stop_adb()
+            #测试一下
             print ('\n冷启动%s次平均耗时为：%s' % (len(self.data), sum(self.data) / len(self.data)))
 
         else:

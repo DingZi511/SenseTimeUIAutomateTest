@@ -1,9 +1,6 @@
 """
 ===================================
-Author:商汤科技-刘孜煜
 Time：2023/6/14
-E-mail:liuziyu1@senseauto.com
-Company:商汤科技
 ===================================
 """
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco

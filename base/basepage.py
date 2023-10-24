@@ -1,9 +1,8 @@
 """
 ===================================
-Author:商汤科技-刘孜煜
+
 Time：2022/10/19
-E-mail:liuziyu1@senseauto.com
-Company:商汤科技
+
 ===================================
 """
 import logging

@@ -1,4 +1,0 @@
-pytest
-airtest
-pocoui
-allure-pytest

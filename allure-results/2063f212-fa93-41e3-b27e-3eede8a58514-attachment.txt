@@ -1,0 +1,205 @@
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 wait-for-device
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell getprop ro.build.version.sdk
+WARNING  airtest.core.api:helper.py:41 Device:HQM6R22B24000796 updated <airtest.core.android.android.Android object at 0x0000017391E356A0> -> <airtest.core.android.android.Android object at 0x0000017391E1CAC8>
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell monkey -p com.senseauto.healthdetect -c android.intent.category.LAUNCHER 1
+INFO     airtest.core.api:cv.py:59 Try finding: Template(case_images/healthRisk_images/tpl1689667365289.png)
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell ls /data/local/tmp/minicap
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell ls /data/local/tmp/minicap.so
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -v 2>&1
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:83 version:5
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:90 skip install minicap
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell ls -l /data/local/tmp/rotationwatcher.jar
+DEBUG    airtest.core.android.rotation:rotation.py:49 install_rotationwatcher skipped
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell app_process -Djava.class.path=/data/local/tmp/rotationwatcher.jar /data/local/tmp com.example.rotationwatcher.Main
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [rotation_server]b'90'
+INFO     airtest.core.android.rotation:rotation.py:151 update orientation None->1
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:383 update_rotation: 90
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell wm size
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell getprop ro.sf.lcd_density
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell dumpsys SurfaceFlinger
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell dumpsys input
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell getevent -p
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'airtest_minicap' -P 1600x2560@1600x2560/90 -s
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:342 do update rotation
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell ps -A| grep minicap
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 forward --no-rebind tcp:19057 localabstract:minicap_19057
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_19057' -P 1600x2560@1600x2560/90 -l 2>&1
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'PID: 4083'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: Using projection 1600x2560@1600x2560/1'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:245) Creating SurfaceComposerClient'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:248) Performing SurfaceComposerClient init check'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:259) Creating virtual display'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:265) Creating buffer queue'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:268) Setting buffer options'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:272) Creating CPU consumer'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:276) Creating frame waiter'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:280) Publishing virtual display'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 12290052 bytes for JPG encoder'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/minicap.cpp:489) Server start'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/minicap.cpp:492) New client connection'
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:245 (1, 24, 4083, 1600, 2560, 1600, 2560, 1, 2)
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:251 quirk_flag found, going to resetup
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:284 minicap stream ends
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b''
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 forward --remove tcp:19057
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell ps -A| grep minicap
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 forward --no-rebind tcp:13425 localabstract:minicap_13425
+DEBUG    airtest.core.android.adb:adb.py:147 C:\Program Files\Pycharm_workspace\SenseTimeUIAutomateTest\venv\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s HQM6R22B24000796 shell LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/minicap -n 'minicap_13425' -P 2560x1600@2560x1600/0 -l 2>&1
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'PID: 4097'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: Using projection 2560x1600@2560x1600/0'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:245) Creating SurfaceComposerClient'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:248) Performing SurfaceComposerClient init check'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:259) Creating virtual display'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:265) Creating buffer queue'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:268) Setting buffer options'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:272) Creating CPU consumer'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:276) Creating frame waiter'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (external/minicap/src/minicap_31.cpp:280) Publishing virtual display'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/JpgEncoder.cpp:64) Allocating 12290052 bytes for JPG encoder'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/minicap.cpp:489) Server start'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minicap_server]b'INFO: (jni/minicap/minicap.cpp:492) New client connection'
+DEBUG    airtest.core.android.cap_methods.minicap:minicap.py:245 (1, 24, 4097, 2560, 1600, 2560, 1600, 0, 2)
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.52 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.51 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.53 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.06 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.52 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.52 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.50 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.50 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.53 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.50 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.52 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.53 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None
+DEBUG    airtest.core.api:cv.py:247 resize: (117, 140)->(156, 186), resolution: (1920, 1200)=>(2560, 1600)
+DEBUG    airtest.core.api:cv.py:189 try match with MultiScaleTemplateMatchingPre
+DEBUG    airtest.aircv.multiscale_template_matching:multiscale_template_matching.py:187 [MSTemplatePre] threshold=0.7, result={'result': (154, 1333), 'rectangle': ((102, 1271.04), (102, 1396.04), (206, 1396.04), (206, 1271.04)), 'confidence': 0.20606808364391327}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.09 s.
+DEBUG    airtest.core.api:cv.py:189 try match with TemplateMatching
+DEBUG    airtest.aircv.template_matching:template_matching.py:84 [Template] threshold=0.7, result={'result': (626, 781), 'rectangle': ((548, 688), (548, 874), (704, 874), (704, 688)), 'confidence': 0.529904842376709}
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.08 s.
+DEBUG    airtest.core.api:cv.py:189 try match with SIFTMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.53 s.
+DEBUG    airtest.core.api:cv.py:189 try match with BRISKMatching
+DEBUG    airtest.aircv.utils:utils.py:21 find_best_result() run time is 0.11 s.
+DEBUG    airtest.core.api:cv.py:155 match result: None

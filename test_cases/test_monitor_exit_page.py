@@ -22,21 +22,26 @@ class TestCheck():
     @allure.feature('健康检测-检测中退出页面模块')
     @allure.story('健康检测之检测中点击左上角的返回按钮显示是否符合设计要求')
     def test_health_check_exit_page(self):
-        touch(Template(r"case_images/healthRisk_images/tpl1689667365289.png", record_pos=(-0.463, 0.234), resolution=(1920, 1200)), duration=2.0)
-        poco("com.senseauto.healthdetect:id/bt_health_detect").click()
-        # 等待该页面消失
-        if poco(text="请选择被检测人 ").wait_for_disappearance():
-            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips_result").get_text().__contains__("欢迎您使用健康检测请您保持静止，即将开始检测"),True, "成功绕过人脸登录转跳到了人脸图片识别中")
+        if exists(Template(r"tpl1698199110469.png", record_pos=(-0.159, -0.126), resolution=(2560, 1600))):
+            touch(Template(r"tpl1698199122282.png", record_pos=(-0.171, -0.159), resolution=(2560, 1600)))
 
+        if assert_exists(Template(r"tpl1698199243891.png", record_pos=(-0.004, 0.005), resolution=(2560, 1600)),
+                         "正常跳转到了健康检测识别选择界面"):
+            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips").get_text(), "请选择被检测人", "小糖智能的提示语正确")
+            touch(Template(r"tpl1698199432166.png", record_pos=(-0.245, -0.002), resolution=(2560, 1600)))
+            sleep(1)
+
+        if assert_exists(Template(r"tpl1698199563430.png", record_pos=(-0.194, 0.272), resolution=(2560, 1600)),
+                         "正确的跳转到了健康检测人脸扫描页面"):
+            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips").get_text(), "请保持正面面对摄像头，在采集框内请保持静止，避免晃动",
+                         "人脸扫描页面小糖智能提示语正确")
+            sleep(1)
+            touch(Template(r"tpl1698199795731.png", record_pos=(-0.454, -0.283), resolution=(2560, 1600)))
+            assert_exists(Template(r"tpl1698199825030.png", record_pos=(-0.018, -0.043), resolution=(2560, 1600)),
+                          "点击返回按钮正常跳转到了首页")
         sleep(3)
         # if poco(text="请保持正面面对摄像头，在采集框内请保持静止，避免晃动").exists():
-        if poco.wait_for_any([poco(text="请保持正面面对摄像头，在采集框内请保持静止，避免晃动"), poco(text="您好，检测已经开始了，为了检测的准确度，请您面向 摄像头，保持静止，很快就能看到结果了！"),poco(text="耐心是一切聪明才智的基础，请再坚持一会儿哦!")]):
-            poco("com.senseauto.healthdetect:id/iv_back").click()
-            if poco("android.view.ViewGroup").exists():
-                assert_equal(poco("com.senseauto.healthdetect:id/title").get_text(), "确定要退出检测吗？退出将不记录本次检测数据","验证退出弹框提示是否正常")
-                poco("com.senseauto.healthdetect:id/bt_confirm").click()
-            else:
-                print("弹框没有及时弹出提示")
+      
 
     @allure.feature('健康检测-检测出报告页面')
     @allure.story('健康检测之检测出报告中成功提示页面的显示是否符合设计要求')

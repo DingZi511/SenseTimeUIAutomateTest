@@ -22,82 +22,62 @@ class TestCheck():
     @allure.feature('健康检测-检测中退出页面模块')
     @allure.story('健康检测之检测中点击左上角的返回按钮显示是否符合设计要求')
     def test_health_check_exit_page(self):
-        if exists(Template(r"tpl1698199110469.png", record_pos=(-0.159, -0.126), resolution=(2560, 1600))):
-            touch(Template(r"tpl1698199122282.png", record_pos=(-0.171, -0.159), resolution=(2560, 1600)))
+        if exists(Template(r"case_images/healthRisk_images/tpl1698199110469.png", record_pos=(-0.159, -0.126), resolution=(2560, 1600))):
+            touch(Template(r"case_images/healthRisk_images/tpl1698199122282.png", record_pos=(-0.171, -0.159), resolution=(2560, 1600)))
 
-        if assert_exists(Template(r"tpl1698199243891.png", record_pos=(-0.004, 0.005), resolution=(2560, 1600)),
+        if assert_exists(Template(r"case_images/healthRisk_images/tpl1698199243891.png", record_pos=(-0.004, 0.005), resolution=(2560, 1600)),
                          "正常跳转到了健康检测识别选择界面"):
             assert_equal(poco("com.senseauto.healthdetect:id/tv_tips").get_text(), "请选择被检测人", "小糖智能的提示语正确")
-            touch(Template(r"tpl1698199432166.png", record_pos=(-0.245, -0.002), resolution=(2560, 1600)))
+            touch(Template(r"case_images/healthRisk_images/tpl1698199432166.png", record_pos=(-0.245, -0.002), resolution=(2560, 1600)))
             sleep(1)
 
-        if assert_exists(Template(r"tpl1698199563430.png", record_pos=(-0.194, 0.272), resolution=(2560, 1600)),
+        if assert_exists(Template(r"case_images/healthRisk_images/tpl1698199563430.png", record_pos=(-0.194, 0.272), resolution=(2560, 1600)),
                          "正确的跳转到了健康检测人脸扫描页面"):
             assert_equal(poco("com.senseauto.healthdetect:id/tv_tips").get_text(), "请保持正面面对摄像头，在采集框内请保持静止，避免晃动",
                          "人脸扫描页面小糖智能提示语正确")
             sleep(1)
-            touch(Template(r"tpl1698199795731.png", record_pos=(-0.454, -0.283), resolution=(2560, 1600)))
-            assert_exists(Template(r"tpl1698199825030.png", record_pos=(-0.018, -0.043), resolution=(2560, 1600)),
+            touch(Template(r"case_images/healthRisk_images/tpl1698199795731.png", record_pos=(-0.454, -0.283), resolution=(2560, 1600)))
+            assert_exists(Template(r"case_images/healthRisk_images/tpl1698199825030.png", record_pos=(-0.018, -0.043), resolution=(2560, 1600)),
                           "点击返回按钮正常跳转到了首页")
         sleep(3)
         # if poco(text="请保持正面面对摄像头，在采集框内请保持静止，避免晃动").exists():
-      
 
-    @allure.feature('健康检测-检测出报告页面')
-    @allure.story('健康检测之检测出报告中成功提示页面的显示是否符合设计要求')
-    def test_health_make_report_page(self):
-        touch(Template(r"case_images/healthRisk_images/tpl1689667365289.png", record_pos=(-0.463, 0.234),resolution=(1920, 1200)), duration=2.0)
-        poco("com.senseauto.healthdetect:id/bt_health_detect").click()
-        # 等待该页面消失
-        if poco(text="请选择被检测人 ").wait_for_disappearance():
-            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips_result").get_text().__contains__("欢迎您使用健康检测请您保持静止，即将开始检测"),True, "成功绕过人脸登录转跳到了人脸图片识别中")
-        sleep(3)
-        poco(text="您好，检测已经开始了，为了检测的准确度，请您面向 摄像头，保持静止，很快就能看到结果了！").wait_for_appearance(20)
 
-        assert_exists(Template(r"case_images/healthRisk_images/tpl1689930868878.png", record_pos=(-0.005, -0.007), resolution=(1920, 1200)),"出报告中，成功提示页面")
+    @allure.feature('情绪与疲劳检测')
+    @allure.story('情绪与疲劳检测之检测页面的显示是否符合设计要求')
+    def test_emotion_fatigue_detection_page(self):
+        if exists(Template(r"tpl1698201713968.png", record_pos=(-0.324, 0.122), resolution=(2560, 1600))):
+            touch(Template(r"tpl1698201728774.png", record_pos=(-0.333, 0.083), resolution=(2560, 1600)))
 
-    @allure.feature('健康检测-检测结果页面')
-    @allure.story('健康检测之检测结果页面中页面提示语以及UI的显示是否符合设计要求')
-    def test_health_result_page(self):
-        touch(Template(r"case_images/healthRisk_images/tpl1689667365289.png", record_pos=(-0.463, 0.234),resolution=(1920, 1200)), duration=2.0)
-        poco("com.senseauto.healthdetect:id/bt_health_detect").click()
-        # 等待该页面消失
-        if poco(text="请选择被检测人 ").wait_for_disappearance():
-            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips_result").get_text().__contains__("欢迎您使用健康检测请您保持静止，即将开始检测"),True, "成功绕过人脸登录转跳到了人脸图片识别中")
-        sleep(3)
-        poco(text="您好，检测已经开始了，为了检测的准确度，请您面向 摄像头，保持静止，很快就能看到结果了！").wait_for_appearance(20)
+        if assert_exists(Template(r"tpl1698201825694.png", record_pos=(0.011, -0.009), resolution=(2560, 1600)),"正常跳转到了情绪与疲劳检测页面了"):
+            assert_equal(poco(text="持续监测您驾驶中的情绪与疲劳，如遇异常将自动触发以下提醒").get_text(), "持续监测您驾驶中的情绪与疲劳，如遇异常将自动触发以下提醒","自动触发提醒文案正确无误")
+            touch(Template(r"tpl1698201982795.png", record_pos=(-0.122, -0.155), resolution=(2560, 1600)))
+            sleep(1)
+        if assert_exists(Template(r"tpl1698202041975.png", record_pos=(-0.003, 0.248), resolution=(2560, 1600)),"正常跳转到了脸部扫描检测页面"):
+            if assert_exists(Template(r"tpl1698202165570.png", record_pos=(0.002, -0.012), resolution=(2560, 1600)),"异常图片检测"):
+                assert_equal(poco("com.senseauto.healthdetect:id/tv_tired_grade").get_text(), "由于未捕捉到脸部，请将脸部对准摄像头","异常情况文案提示正确无误")
+                touch(Template(r"tpl1698202292659.png", record_pos=(0.0, 0.248), resolution=(2560, 1600)))
+                sleep(1)
+                assert_exists(Template(r"tpl1698202659631.png", record_pos=(0.001, 0.273), resolution=(2560, 1600)),"异常结束检测toast提示正确")
+                touch(Template(r"tpl1698202968872.png", record_pos=(-0.447, -0.281), resolution=(2560, 1600)))
 
-        assert_exists(Template(r"case_images/healthRisk_images/tpl1689930868878.png", record_pos=(-0.005, -0.007),resolution=(1920, 1200)), "出报告中，成功提示页面")
-        assert_equal(poco("com.senseauto.healthdetect:id/tv_health_record_remark").get_text().__contains__("仅作为参考，不可作为医疗专业诊断"),True, "正常跳转到了健康检测结果页面")
-        if poco(text="检测结果").exists():
-            poco("com.senseauto.healthdetect:id/tvDetectResult").click()
-            if poco(text="偏低").exists():
-                assert_equal(poco("com.senseauto.healthdetect:id/tv_robot_text").get_text(), "本次健康检测存在不达标项，请关注身体健康~","在不达标时小机器人的提示语是否正确")
-            else:
-                assert_equal(poco("com.senseauto.healthdetect:id/tv_robot_text").get_text(), "恭喜您，本次检测各项指标一切正常，继续保持~","在达标时小机器人的提示语是否正确")
-        else:
-            print("没有正常跳转到检测结果页面来")
+                assert_exists(Template(r"tpl1698203021469.png", record_pos=(-0.011, -0.014), resolution=(2560, 1600)),"正常跳转到了首页")
 
-    @allure.feature('健康检测-健康风险页面')
-    @allure.story('健康检测之健康风险页面中页面提示语以及UI的显示是否符合设计要求')
-    def test_health_risk_page(self):
-        touch(Template(r"case_images/healthRisk_images/tpl1689667365289.png", record_pos=(-0.463, 0.234),resolution=(1920, 1200)), duration=2.0)
-        poco("com.senseauto.healthdetect:id/bt_health_detect").click()
-        # 等待该页面消失
-        if poco(text="请选择被检测人 ").wait_for_disappearance():
-            assert_equal(poco("com.senseauto.healthdetect:id/tv_tips_result").get_text().__contains__("欢迎您使用健康检测请您保持静止，即将开始检测"),True, "成功绕过人脸登录转跳到了人脸图片识别中")
-        sleep(3)
-        poco(text="您好，检测已经开始了，为了检测的准确度，请您面向 摄像头，保持静止，很快就能看到结果了！").wait_for_appearance(20)
+    @allure.feature('情绪疲劳-预警温度设置')
+    @allure.story('情绪疲劳之检测预警温度设置是否符合设计要求')
+    def test_temperature_settability_page(self):
+        if exists(Template(r"tpl1698201713968.png", record_pos=(-0.324, 0.122), resolution=(2560, 1600))):
+            touch(Template(r"tpl1698201728774.png", record_pos=(-0.333, 0.083), resolution=(2560, 1600)))
 
-        assert_exists(Template(r"case_images/healthRisk_images/tpl1689930868878.png", record_pos=(-0.005, -0.007),resolution=(1920, 1200)), "出报告中，成功提示页面")
-        assert_equal(poco("com.senseauto.healthdetect:id/tv_health_record_remark").get_text().__contains__("仅作为参考，不可作为医疗专业诊断"),True, "正常跳转到了健康检测结果页面")
-        if poco(text="健康风险").exists():
-            poco("com.senseauto.healthdetect:id/tvHealthRisk").click()
-            if poco(text="心率").exists():
-                swipe((1779, 903), (1779, 290), duration=1)
-                assert_equal(poco("com.senseauto.healthdetect:id/tv_health_record_recommend_service").get_text(),"为您推荐的相关健康服务", "健康有风险页面内容显示正常")
-            else:
-                assert_equal(poco(text="恭喜您，本次检测各项指标一切正常，继续保持~"), "恭喜您，本次检测各项指标一切正常，继续保持~", "健康无风险页面内容显示正常")
+        if assert_exists(Template(r"tpl1698203817402.png", record_pos=(0.21, -0.209), resolution=(2560, 1600)),"成功进入到了预警温度设置页面"):
+            touch(Template(r"tpl1698203973874.png", record_pos=(0.23, -0.118), resolution=(2560, 1600)))
+            assert_exists(Template(r"tpl1698204051867.png", record_pos=(0.221, 0.066), resolution=(2560, 1600)),"期望温度显示正常")
+            touch(Template(r"tpl1698204013836.png", record_pos=(0.354, -0.116), resolution=(2560, 1600)))
+            touch(Template(r"tpl1698204342464.png", record_pos=(0.326, 0.094), resolution=(2560, 1600)), times=3,duration=0.05)
+            touch(Template(r"tpl1698204473629.png", record_pos=(0.103, -0.119), resolution=(2560, 1600)))
+            touch(Template(r"tpl1698204484829.png", record_pos=(0.12, 0.091), resolution=(2560, 1600)), times=3,duration=0.05)
+            touch(Template(r"tpl1698204560620.png", record_pos=(-0.452, -0.284), resolution=(2560, 1600)))
+            assert_exists(Template(r"tpl1698204577975.png", record_pos=(-0.005, -0.016), resolution=(2560, 1600)),"正常跳转到了首页")
 
 
 def teardown_method(self):

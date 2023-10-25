@@ -10,7 +10,7 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 
 @allure.feature("健康视诊")
 class TestHealthOnline():
-    def setup_method(self):
+    def setup(self):
         auto_setup(__file__, logdir=True, devices=["android://127.0.0.1:5037/HQM6R22B24000796?cap_method=MINICAP&touch_method=MAXTOUCH&", ])
         start_app('com.senseauto.healthdetect')
         sleep(3)
@@ -73,5 +73,5 @@ class TestHealthOnline():
         #     if poco("android.view.ViewGroup").wait_for_appearance():
         #         poco("com.senseauto.healthdetect:id/bt_confirm").click()
 
-    def teardown_method(self):
+    def teardown(self):
         stop_app('com.senseauto.healthdetect')
